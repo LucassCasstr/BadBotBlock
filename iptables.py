@@ -60,8 +60,8 @@ def AbuseDBIP(ip, api_key):
 ###### TCP DUMP ######
 
 
-comando = "tcpdump -l -i eth0 host 192.168.0.113" #SUBSTITUA O "HOST" PELO IP DA MÁQUINA LINUX QUE QUERES DEFENDER
-process = subprocess.Popen(comando, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+tcpdump = "tcpdump -l -i eth0 host 192.168.0.113" #SUBSTITUA O "HOST" PELO IP DA MÁQUINA LINUX QUE QUERES DEFENDER
+process = subprocess.Popen(tcpdump, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
 
 for linha in process.stdout:
     print(linha.strip())  
